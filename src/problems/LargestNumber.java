@@ -6,7 +6,9 @@ public class LargestNumber {
 
     public static void main(String[] args) {
 
-            int A[]={24, 45, 67, 90, 94};
+            int A[]={9,9,9};
+
+            //2,24,30,3
             System.out.println(largestNumber(A));
     }
 
