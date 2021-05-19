@@ -20,6 +20,7 @@ public class RainWaterTrapped {
         left[0]= A[0];
 
 
+
         for(int i=1;i<A.length;i++)
         {
             left[i]=Math.max(left[i-1],A[i]);
