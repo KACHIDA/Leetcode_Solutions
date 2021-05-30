@@ -17,8 +17,14 @@ public class MaxChunks {
     }
     public static int solve(ArrayList<Integer> A) {
 
+
+
         int max=-99999;
         int count=0;
+
+       // String s = “123456789012345”
+        //StringBuilder sb = new StrinBuilder();
+        //sb.append(s.substring(0,7)).append(“****”).append(s.substring(10,16));
 
         for(int i=0;i<A.size();i++)
         {
