@@ -12,17 +12,38 @@ public class PariSumDivisble {
 
     public static int solve(int[] A,int B)
     {
-        int[] freq = new int[B];
+        int[] cnt = new int[B];
         long ans=0;
         long M = 1000000007;
         for(int i=0;i<A.length;i++)
         {
-            int rem = A[i]%B;
-            ans = (ans + freq[(B-rem)%B]) %M;
-            freq[rem]++;
+            cnt[A[i]%B]++;
         }
 
-        int ans1=(int)ans;
+        ans = (cnt[0] * (cnt[0]-1))/2;
+        ans = ans%M;
+
+        int i=1,j=B-1;
+        while(i<=j)
+        {
+            if(i==j)
+            {
+                ans += (cnt[i] * (cnt[j]-1))/2;
+                ans = ans%M;
+
+
+            }else
+            {
+                ans+= cnt[i]*cnt[j];
+                ans = ans%M;
+            }
+
+            i++;
+            j--;
+
+        }
+
+        int ans1=(int) ans;
         return ans1;
     }
 }
