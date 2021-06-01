@@ -10,7 +10,7 @@ public class RemoveDuplicatesInSortedArray {
 
     public static void main(String[] args)
     {
-        int[] arr = {0, 0, 0, 0, 1, 1, 1,2, 2, 3, 3, 3};
+        int[] arr = {8,8, 8, 8, 1, 1, 1,2, 2, 3, 3, 3};
         CopyOnWriteArrayList<Integer> intList = new CopyOnWriteArrayList<Integer>();
         for (int i : arr)
         {
@@ -36,24 +36,26 @@ public class RemoveDuplicatesInSortedArray {
             currVal=iter.next();
             if(startVal == currVal)
             {
-
                 if(count >= 2)
                 {
                     a.remove(i);
+                    --i;
+
                 }
                 else
                 {
                     ++count;
+                    i++;
                 }
 
             }else
             {
                 count=0;
                 startVal = currVal;
-
+                i++;
             }
 
-            i++;
+
 
         }
 
