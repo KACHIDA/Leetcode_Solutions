@@ -20,11 +20,13 @@ public class WaveArray {
         Arrays.sort(A);
         int temp=0;
 
-        for(int i=0;i<A.length && (i+2) <= A.length;i=i+2)
+        int i=0;
+        while(i<A.length-1)
         {
             temp=A[i];
             A[i]=A[i+1];
             A[i+1]=temp;
+            i=i+2;
         }
 
 
